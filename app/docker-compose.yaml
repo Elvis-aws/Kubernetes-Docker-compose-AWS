@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  user-country-api:
+    container_name: api-container
+    depends_on:
+      - redis
+    build:
+      context: ./
+      dockerfile: app.Dockerfile
+    entrypoint: python application.py
+    env_file:
+      - .env
+    ports:
+      - '9003:9003'
+    restart: always
+    volumes:
+      - datastore:/var/lib
+  redis:
+    image: redis
+    container_name: redis-container
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - datastore:/tests
+  test-api:
+    container_name: test-container
+    build:
+      context: ./
+      dockerfile: test.Dockerfile
+volumes:
+  datastore:
+    driver: local

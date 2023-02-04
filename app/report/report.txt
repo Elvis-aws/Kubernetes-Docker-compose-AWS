@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.1, pytest-7.2.1, pluggy-1.0.0
+rootdir: /Users/elvisngwesse/Desktop/Repositories/Docker-Kubernetes/app, configfile: pytest.ini
+plugins: rerunfailures-11.0, html-3.2.0, allure-pytest-2.12.0, metadata-2.0.4
+collected 4 items
+
+tests/demo_test.py RRF...                                                [100%]
+
+=================================== FAILURES ===================================
+_________________________ DemoTest.test_demo_test_four _________________________
+
+self = <tests.demo_test.DemoTest testMethod=test_demo_test_four>
+
+    def test_demo_test_four(self):
+>       self.assertFalse(True)
+E       AssertionError: True is not false
+
+tests/demo_test.py:15: AssertionError
+=========================== short test summary info ============================
+FAILED tests/demo_test.py::DemoTest::test_demo_test_four - AssertionError: Tr...
+===================== 1 failed, 3 passed, 2 rerun in 0.03s =====================

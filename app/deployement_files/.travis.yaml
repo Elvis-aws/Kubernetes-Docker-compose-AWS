@@ -1,0 +1,17 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t user-api:latest -f test.Dockerfile .
+script:
+  - docker run user-api:latest pytest
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-2"
+  app: "Docker_flask"
+  env: "Dockerflask-env"
+  bucket_name: "elasticbeanstalk-eu-west-2-934433842270"
+  bucket_path: "Docker_flask"
+  on:
+    branch: master

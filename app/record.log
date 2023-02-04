@@ -1,0 +1,26 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 289-830-488
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:26] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:27] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:27] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:28] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:29] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:29] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:30] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:30] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:33] "GET /user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:33] "[36mGET /user?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:33] "[36mGET /user?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:33] "[36mGET /user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): universities.hipolabs.com:80
+DEBUG:urllib3.connectionpool:http://universities.hipolabs.com:80 "GET /search?country=None HTTP/1.1" 200 2
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:39] "GET /universities HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): universities.hipolabs.com:80
+DEBUG:urllib3.connectionpool:http://universities.hipolabs.com:80 "GET /search?country=None HTTP/1.1" 200 2
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:51] "GET /universities HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): universities.hipolabs.com:80
+DEBUG:urllib3.connectionpool:http://universities.hipolabs.com:80 "GET /search?country=None HTTP/1.1" 200 2
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 04:59:54] "GET /universities HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): universities.hipolabs.com:80
+DEBUG:urllib3.connectionpool:http://universities.hipolabs.com:80 "GET /search?country=Cameroon HTTP/1.1" 200 3838
+INFO:werkzeug:127.0.0.1 - - [02/Feb/2023 05:00:51] "GET /universities?country=Cameroon HTTP/1.1" 200 -
