@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  user-country-api:
+  client:
     container_name: api-container
     depends_on:
       - redis
@@ -28,6 +28,14 @@ services:
     build:
       context: ./
       dockerfile: test.Dockerfile
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "4050:80"
+
 volumes:
   datastore:
     driver: local

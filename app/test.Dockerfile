@@ -2,7 +2,7 @@ FROM python:3-alpine3.11
 ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
-
+EXPOSE 9003
 
 WORKDIR /app
 COPY requirements.txt /app

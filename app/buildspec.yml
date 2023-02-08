@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+        - docker build -t dockerelvis/user-api:latest -f app.Dockerfile .
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Python code...
+      - docker run dockerelvis/user-api:latest pytest
+      - docker push dockerelvis/user-api:latest
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - application.py
+    - appspec.yml
+    - templates/index.html
+    - scripts/stop_container.py
+    - scripts/start_container.py

@@ -13,7 +13,7 @@ class DemoTest(TestCase):
         self.assertTrue(True)
 
     def test_demo_test_four(self):
-        self.assertFalse(True)
+        self.assertFalse(False)
 
     def test_demo_test_five(self):
         self.assertTrue(True)

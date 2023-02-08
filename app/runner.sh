@@ -11,7 +11,7 @@ post_actions()
     mv report.txt report/
 
 #    Add additional functionality
-#    script needs to be refactored
+#    scripts needs to be refactored
 #    python log_collector.py
 }
 

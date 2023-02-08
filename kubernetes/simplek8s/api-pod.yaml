@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: api-port
+    labels:
+      component: web
+spec:
+  containers:
+    - name: api-client
+      image: dockerelvis/user-api:latest
+      ports:
+        - containerPort: 9003
