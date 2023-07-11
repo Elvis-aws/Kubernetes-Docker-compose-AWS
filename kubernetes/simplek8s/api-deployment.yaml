@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: volume-claim
+      containers:
+        - name: api-port-container
+          image: dockerelvis/user-api:latest
+          env:
+            - name: REDIS_HOST
+              value: 'api-client-service'
+            - name: REDIS_PORT
+              value: '6379'
+          ports:
+            - containerPort: 9003
+#          volumeMounts:
+#            - name: storage
+#              mountPath: app
+#              subPath: redis
+#        - name: redis-container
+#          image: redis
+#          ports:
+#            - containerPort: 6379

@@ -5,11 +5,11 @@ services:
     depends_on:
       - redis
     build:
-      context: ./
-      dockerfile: app.Dockerfile
+      context: ./flask
+      dockerfile: Dockerfile
     entrypoint: python application.py
     env_file:
-      - .env
+      - flask/.env
     ports:
       - '9003:9003'
     restart: always
@@ -23,11 +23,6 @@ services:
       - "6379:6379"
     volumes:
       - datastore:/tests
-  test-api:
-    container_name: test-container
-    build:
-      context: ./
-      dockerfile: test.Dockerfile
   nginx:
     restart: always
     build:
@@ -35,6 +30,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4050:80"
+  test-api:
+    container_name: test-container
+    build:
+      context: ./test
+      dockerfile: Dockerfile
 
 volumes:
   datastore:

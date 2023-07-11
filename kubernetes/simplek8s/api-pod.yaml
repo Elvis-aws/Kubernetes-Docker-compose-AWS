@@ -6,7 +6,13 @@ metadata:
       component: web
 spec:
   containers:
-    - name: api-client
+    - name: api-port-container
       image: dockerelvis/user-api:latest
       ports:
         - containerPort: 9003
+    - name: redis-container
+      image: redis
+      ports:
+        - containerPort: 6379
+
+
